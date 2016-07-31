@@ -1,0 +1,12 @@
+{
+  "host": "localhost",
+  "port": 3030,
+  "nedb": "../data/",
+  "public": "../public/",
+  "auth": {
+    "token": {
+      "secret": "l1bffsoRSGz4HMmNUYN33f6eoy5+qGlKkaGL5qQxIugoPXTnng0xfp4iqn3HHzWNBuZrjS+jNqoXVKaINkg3Mw=="
+    },
+    "local": {}
+  }
+}
