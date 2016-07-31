@@ -29,5 +29,7 @@ module.exports = function() {
       //Add the current time via `getTime`
       createdAt: new Date().getTime()
     };
+
   };
+
 };
