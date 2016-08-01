@@ -3,8 +3,19 @@
  */
 
 var ReactDOM = require('react-dom');
+var React = require('react');
 
 import {ChatApp} from './chat_app.js';
+
+const socket = io();
+
+const app = feathers()
+  .configure(feathers.socketio(socket))
+  .configure(feathers.hooks())
+  //use localstorage to store our login token
+  .configure(feathers.authentication({
+    storage: window.localStorage
+  }));
 
 app.authenticate().then(() => {
   ReactDOM.render(<div id="app" className="flex flex-column">
@@ -17,7 +28,7 @@ app.authenticate().then(() => {
       </div>
     </header>
 
-    <ChatApp/>
+    <ChatApp app={app}/>
 
   </div>, document.body)
 }).catch(error => {

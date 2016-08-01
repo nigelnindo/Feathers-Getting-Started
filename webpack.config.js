@@ -1,7 +1,7 @@
 var webpack = require('webpack');
 var path = require('path');
 
-var BUILD_DIR = './dist';
+var BUILD_DIR = './public/js';
 
 var config = {
 

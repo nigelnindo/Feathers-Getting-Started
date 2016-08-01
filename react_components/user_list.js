@@ -4,6 +4,8 @@
 
 var React = require('React');
 
+const PLACEHOLDER = 'https://placeimg.com/60/60/people';
+
 export const UserList = React.createClass({
 
   propTypes:{
@@ -11,7 +13,7 @@ export const UserList = React.createClass({
   },
 
   logout(){
-    app.logout.then(() => window.location.href = '/index.html')
+    this.props.app.logout().then(() => window.location.href = '/index.html')
   },
 
   render(){
@@ -26,8 +28,8 @@ export const UserList = React.createClass({
       </header>
 
       <ul className="flex flex-column flex-1 list-unstyled user-list">
-        {user.map(user =>
-          <li>
+        {users.map((user,index) =>
+          <li key={index}>
             <a className="block relative" href="#">
               <img src={user.avatar || PLACEHOLDER} className="avatar"/>
               <span className="absolute username">{user.email}</span>

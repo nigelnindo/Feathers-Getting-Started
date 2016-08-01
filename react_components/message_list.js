@@ -5,11 +5,18 @@
 var React = require('React');
 var moment = require('moment');
 
+const PLACEHOLDER = 'https://placeimg.com/60/60/people';
+
+const dummyUser = {
+  avatar: PLACEHOLDER,
+  email: 'Anonymous'
+};
+
  export const MessageList = React.createClass({
-  renderMessage(message){
+  renderMessage(message,index){
     const sender = message.sentBy || dummyUser;
 
-    return <div className="message flex flex-row">
+    return <div key={index} className="message flex flex-row">
       <img src={sender.avatar || PLACEHOLDER} alt={sender.email}/>
       <div className="message-wrapper">
         <p className="message-header">

@@ -16,7 +16,7 @@ export const ComposeMessage = React.createClass({
 
   sendMessage(ev){
     // Get the messages service
-    const messageService = app.service('messages');
+    const messageService = this.props.app.service('messages');
 
     // Create a new message with text from the input field
     messageService.create({
