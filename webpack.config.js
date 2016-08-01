@@ -31,11 +31,6 @@ var config = {
     extensions: ['','.js','.json']
   },
 
-  node: {
-    fs: "empty",
-    tls: "empty"
-  }
-
 };
 
 module.exports = config;
