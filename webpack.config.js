@@ -29,6 +29,11 @@ var config = {
 
   resolve: {
     extensions: ['','.js','.json']
+  },
+
+  node: {
+    fs: "empty",
+    tls: "empty"
   }
 
 };

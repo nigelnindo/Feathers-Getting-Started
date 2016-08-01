@@ -7,7 +7,7 @@ var React = require('react');
 
 import {ChatApp} from './chat_app.js';
 
-const socket = io();
+const socket = require('socket.io-client')();
 
 const app = feathers()
   .configure(feathers.socketio(socket))
@@ -30,7 +30,7 @@ app.authenticate().then(() => {
 
     <ChatApp app={app}/>
 
-  </div>, document.body)
+  </div>, document.getElementById('reactapp'))
 }).catch(error => {
   if (error.code === 401){
     window.location.href = '/login.html';
