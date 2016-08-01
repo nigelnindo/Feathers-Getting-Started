@@ -14,7 +14,10 @@ const socketio = require('feathers-socketio');
 const middleware = require('./middleware');
 const services = require('./services');
 
+
 const app = feathers();
+
+app.set('view engine', 'ejs');
 
 app.configure(configuration(path.join(__dirname, '..')));
 
