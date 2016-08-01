@@ -23,7 +23,8 @@ export const ComposeMessage = React.createClass({
       text: this.state.text
     }).then(() => this.setState({text: ''}));
 
-    ev.preventDeafult();
+    ev.preventDefault();
+
   },
 
   render(){
