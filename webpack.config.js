@@ -6,7 +6,7 @@ var BUILD_DIR = './dist';
 var config = {
 
   entry: {
-
+    compose_message: ['./react_components/compose_message.js']
   },
 
   output: {
