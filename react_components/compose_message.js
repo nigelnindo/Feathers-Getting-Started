@@ -4,7 +4,8 @@
 
 var React = require('react');
 
-const ComposeMessage = React.createClass({
+
+export const ComposeMessage = React.createClass({
   getInitialState(){
     return { text: ''};
   },
@@ -33,3 +34,4 @@ const ComposeMessage = React.createClass({
   }
 
 });
+

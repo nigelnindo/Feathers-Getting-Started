@@ -4,7 +4,7 @@
 
 var React = require('React');
 
-const UserList = React.createClass({
+export const UserList = React.createClass({
 
   propTypes:{
     users: React.PropTypes.array.isRequired
@@ -43,3 +43,4 @@ const UserList = React.createClass({
     </aside>;
   }
 });
+
