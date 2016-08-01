@@ -8,6 +8,7 @@ var React = require('react');
 import {ChatApp} from './chat_app.js';
 
 const socket = require('socket.io-client')();
+const feathers = require('feathers-client');
 
 const app = feathers()
   .configure(feathers.socketio(socket))
